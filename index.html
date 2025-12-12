@@ -4579,11 +4579,11 @@
     <div class="friendlink text-xs card">
         <div class="card-body">
 
-	    <a href="http://47.86.15.60:50012/" title="网络音乐探索" target="_blank">网络音乐探索</a>
+	    <a href="http://mp3.adyu.top/" title="网络音乐探索" target="_blank">网络音乐探索</a>
 
-	    <a href="https://juejin.im" title="掘金社区" target="_blank">掘金社区</a>
+	    <a href="https://wd.adyu.top" title="工具应用" target="_blank">工具应用</a>
 
-	    <a href="https://aliyun.com" title="阿里云社区" target="_blank">阿里云社区</a>
+	    <a href="https://psou.adyu.top" title="云盘热搜" target="_blank">云盘热搜</a>
 
         </div>
     </div>
@@ -4844,8 +4844,43 @@ var theme = {"ajaxurl":"","addico":"https:\/\/nav.baidu.cn\/wp-content\/themes\/
     });
 </script>
 
-<script>
 
+
+<a href="javascript:void(0)" onclick="switchNightMode()" 
+   class="btn rounded-circle switch-dark-mode m-1" 
+   id="yejian"
+   style="
+     display: flex !important;
+     align-items: center !important;
+     justify-content: center !important;
+     width: 40px !important;
+     height: 40px !important;
+     background-color: rgba(0, 123, 255, 0.7) !important; /* 改为半透明 */
+     color: white !important;
+     border-radius: 50% !important;
+     position: fixed !important;
+     top: 70px !important;
+     right: 2px !important;
+     z-index: 9999 !important;
+     cursor: pointer !important;
+     border: 1px solid rgba(255, 255, 255, 0.3) !important; /* 添加白色边框增强可见性 */
+     text-decoration: none !important;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+     backdrop-filter: blur(5px) !important; /* 毛玻璃效果，可选 */
+     transition: all 0.3s ease !important;
+   "
+   data-toggle="tooltip" 
+   data-placement="left" 
+   title="日间模式"
+   onmouseover="this.style.backgroundColor='rgba(0, 123, 255, 0.9)'" 
+   onmouseout="this.style.backgroundColor='rgba(0, 123, 255, 0.7)'">
+    <i class="mode-ico iconfont icon-night" 
+       style="font-size: 20px !important; color: rgba(255, 255, 255, 0.9) !important;"></i>
+</a>
+
+
+
+<script>
 (function(){
     if(document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === ''){
         if(new Date().getHours() > 22 || new Date().getHours() < 6){
@@ -4892,6 +4927,7 @@ function switchNightMode(){
     }
 }
 </script>
+<script defer src="http://95.40.26.92:3000/script.js" data-website-id="0083643a-6cfa-4a0d-a7f2-cc0326d7d176"></script>
 </body>
 </html>
 
