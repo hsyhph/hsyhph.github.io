@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<title>免费在线Photoshop | FreePS</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<meta name="description" content="在线图片编辑器，使用HTML5+Vue技术开发的开源在线图片编辑器，具有图片编辑、画笔、滤镜、调整大小、文字、缩放、图层和截图等功能。该编辑器模仿了Photoshop的大部分功能..." />
+	<meta name="keywords"
+		content="图片, 照片, 图像, 透明, 图层, 免费, 编辑, html5, 画布, javascript, 在线, Photoshop, GIMP, 效果, 锐化, 模糊, 魔术橡皮擦工具, 克隆工具, 旋转, 调整大小, Photoshop在线, 在线工具, 倾斜偏移, 精灵, 关键点" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, user-scalable=yes" />
+	<link rel="icon" sizes="192x192" href="images/favicon.png">
+	<!-- <link rel="manifest" href="dist/manifest.json"> -->
+	<!-- Google -->
+
+	<link rel="canonical" href="https://freeps.org">
+	<meta itemprop="name" content="免费在线Photoshop工具" />
+	<meta itemprop="description" content="在线Photoshop是一款使用HTML5技术的免费在线图片编辑器。无需安装任何软件，直接在浏览器中编辑、调整和添加特效..." />
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="免费在线Photoshop工具" />
+	<meta name="twitter:description" content="在线Photoshop是一款使用HTML5技术的免费在线图片编辑器..." />
+	<!-- Facebook, Pinterest -->
+	<meta property="og:title" content="免费在线Photoshop工具" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://freeps.org" />
+	<meta property="og:description" content="在线Photoshop是一款使用HTML5技术的免费在线图片编辑器..." />
+	<meta property="og:site_name" content="免费在线Photoshop工具" />
+
+	<script src="dist/bundle.js" async></script>
+
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<nav aria-label="主菜单" class="main_menu" id="main_menu"></nav>
+
+		<div class="submenu">
+			<a class="logo" href="#">FreePS</a>
+			<div class="block attributes" id="action_attributes"></div>
+			<button class="undo_button" id="undo_button" type="button">
+				<span class="sr_only">撤销</span>
+			</button>
+		</div>
+
+		<div class="sidebar_left" id="tools_container"></div>
+
+
+		<div class="middle_area" id="middle_area">
+
+			<canvas class="ruler_left" id="ruler_left"></canvas>
+			<canvas class="ruler_top" id="ruler_top"></canvas>
+
+			<div class="main_wrapper" id="main_wrapper">
+				<div class="canvas_wrapper" id="canvas_wrapper">
+					<div id="mouse"></div>
+					<div class="transparent-grid" id="canvas_minipaint_background"></div>
+					<canvas id="canvas_minipaint">
+						<div class="trn error">
+							您的浏览器不支持canvas或JavaScript未启用。
+						</div>
+					</canvas>
+				</div>
+			</div>
+		</div>
+
+		<div class="sidebar_right">
+			<div class="preview block">
+				<h2 class="trn toggle" data-target="toggle_preview">预览</h2>
+				<div id="toggle_preview"></div>
+			</div>
+
+			<div class="colors block">
+				<h2 class="trn toggle" data-target="toggle_colors">颜色</h2>
+				<div class="content" id="toggle_colors"></div>
+			</div>
+
+			<div class="block" id="info_base">
+				<h2 class="trn toggle toggle-full" data-target="toggle_info">信息</h2>
+				<div class="content" id="toggle_info"></div>
+			</div>
+
+			<div class="details block" id="details_base">
+				<h2 class="trn toggle toggle-full" data-target="toggle_details">图层详情</h2>
+				<div class="content details-content" id="toggle_details"></div>
+			</div>
+
+			<div class="layers block">
+				<h2 class="trn">图层</h2>
+				<div class="content" id="layers_base"></div>
+			</div>
+		</div>
+	</div>
+	<div class="mobile_menu">
+		<button class="left_mobile_menu" id="left_mobile_menu_button" type="button">
+			<span class="sr_only">切换菜单</span>
+		</button>
+		<button class="right_mobile_menu" id="mobile_menu_button" type="button">
+			<span class="sr_only">切换菜单</span>
+		</button>
+	</div>
+	<div class="hidden" id="tmp"></div>
+	<div id="popups"></div>
+</body>
+
+</html>
